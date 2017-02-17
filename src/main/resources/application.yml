@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: geoip
+  mvc:
+    throw-exception-if-no-handler-found: true
+server:
+  port: ${GEOIP_PORT:8820}
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ADVERTISED_HOST_NAME:localhost}:8761/eureka/
+    healthcheck:
+          enabled: true
+
+management:
+  security:
+    enabled: false
+
+feign:
+  compression:
+    request:
+      enabled: true
+    mime-types: application/json
+    response:
+      enabled: true
+
+geoip:
+  ribbon:
+    listOfServers: http://freegeoip.net
+
+ribbon:
+  eureka:
+   enabled: false
+
+debug: false
