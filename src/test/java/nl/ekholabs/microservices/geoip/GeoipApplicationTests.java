@@ -1,4 +1,4 @@
-package com.irdeto.rrm.microservices.geoip;
+package nl.ekholabs.microservices.geoip;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

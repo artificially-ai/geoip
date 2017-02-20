@@ -1,9 +1,9 @@
-package com.irdeto.rrm.microservices.geoip.controller;
+package nl.ekholabs.microservices.geoip.controller;
 
-import com.irdeto.rrm.microservices.geoip.client.GeoIpResource;
-import com.irdeto.rrm.microservices.geoip.model.Ip;
-import com.irdeto.rrm.microservices.geoip.model.Request;
-import com.irdeto.rrm.microservices.geoip.model.Response;
+import nl.ekholabs.microservices.geoip.client.GeoIpResource;
+import nl.ekholabs.microservices.geoip.model.Ip;
+import nl.ekholabs.microservices.geoip.model.Request;
+import nl.ekholabs.microservices.geoip.model.Response;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

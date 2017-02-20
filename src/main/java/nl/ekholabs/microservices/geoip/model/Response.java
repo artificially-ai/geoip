@@ -1,4 +1,4 @@
-package com.irdeto.rrm.microservices.geoip.model;
+package nl.ekholabs.microservices.geoip.model;
 
 
 public class Response {

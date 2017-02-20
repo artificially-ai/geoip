@@ -1,6 +1,6 @@
-package com.irdeto.rrm.microservices.geoip.client;
+package nl.ekholabs.microservices.geoip.client;
 
-import com.irdeto.rrm.microservices.geoip.model.Ip;
+import nl.ekholabs.microservices.geoip.model.Ip;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
