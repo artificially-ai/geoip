@@ -31,7 +31,7 @@ public class GeoIpControllerTest {
 
   @Test
   public void checkIpNotAllowed() throws Exception {
-    RequestBuilder request = post("/checkIp")
+    RequestBuilder request = post("/whois")
         .contentType(APPLICATION_JSON_UTF8_VALUE)
         .content("    {\n"
           + "      \"ip\" : \"54.239.36.155\",\n"
@@ -56,7 +56,7 @@ public class GeoIpControllerTest {
 
   @Test
   public void checkIpAllowed() throws Exception {
-    RequestBuilder request = post("/checkIp")
+    RequestBuilder request = post("/whois")
         .contentType(APPLICATION_JSON_UTF8_VALUE)
         .content("    {\n"
             + "      \"ip\" : \"77.163.214.250\",\n"
