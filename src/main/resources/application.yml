@@ -4,6 +4,7 @@ spring:
   mvc:
     throw-exception-if-no-handler-found: true
 server:
+  context-path: /ipservice
   port: ${GEOIP_PORT:8820}
 
 endpoints:
