@@ -39,6 +39,12 @@ POST:
     }
 ```
 
+## Postman Example
+
+Use Postman as exhibited in the image below:
+
+[GeoIP with Postman](https://github.com/ekholabs/geoip/blob/master/src/test/resources/geoip_postman.png)
+
 # IPs to test
 
 * 172.217.2.14
