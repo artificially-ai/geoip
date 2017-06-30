@@ -61,7 +61,3 @@ We can simply change the service URL and use a new IP database.
 * Add more IP database services.
 * Finish Dockerfile.
 * Add docker-compose.
-
-# Unit Tests
-
-* Still to be added.
