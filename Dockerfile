@@ -1,9 +1,16 @@
-FROM ekholabs/wercker-jdk8
+FROM debian:latest
 
-COPY target/geoip-0.0.1-SNAPSHOT.jar /tmp/GeoIP/geoip.jar
+RUN apt-get -y update && apt-get install -y openjdk-8-jre-headless openjdk-8-jdk maven git
 
-EXPOSE 8820
-WORKDIR /tmp/GeoIP
+WORKDIR ekholabs
+
+RUN git clone https://github.com/ekholabs/geoip
+WORKDIR geoip
+RUN ./gradlew clean build
+
+ENV GEOIP_PORT=80
+
+EXPOSE $GEOIP_PORT
 
 ENTRYPOINT ["java"]
-CMD ["-Xmx64M", "-jar", "geoip.jar"]
+CMD ["-server", "-Xmx256G", "-jar", "build/libs/geoip-0.0.1-SNAPSHOT.jar"]
