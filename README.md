@@ -12,7 +12,7 @@
 
 # Service endpoint
 
-* http://localhost:8820/checkIp
+* http://localhost:8820/geoip/whois
 
 The service exposes a POST method which can be used to check if a given IP is allowed, given
 the allowed locations.
@@ -48,6 +48,20 @@ POST:
 
 Feel free to add more or automate it with several IPs.
 
+# Running with Docker
+
+After cloning the repository, one can run the application by simply typing:
+
+* ```docker build -t geoip --no-cache .```
+* ```docker run -p 80:80 geoip```
+
+# Pulling a pre-built Image
+
+The image can be pulled from hub.docker and executed without the need to clone the repository:
+
+* ```docker pull ekholabs/geoip:latest```
+* ```docker run -p 80:80 ekholabs/geoip```
+
 # Remarks
 
 The microservice is using http://freegeoip.net, which is free and offers 15k requests
@@ -59,5 +73,5 @@ We can simply change the service URL and use a new IP database.
 # Improvements
 
 * Add more IP database services.
-* Finish Dockerfile.
-* Add docker-compose.
+
+Have fun!
